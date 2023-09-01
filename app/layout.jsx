@@ -7,20 +7,21 @@ export const metadata = {
     description: 'Discover and share AI prompts',
 }
 
-const RootLayout = ({children}) => {
-  return (
+const RootLayout = ({children}) =>  (
     <html lang='en'>
         <body>
-            <div className='main'>
-                <div className='gradient' />
+            <Provider>
+                <div className='main'>
+                    <div className='gradient' />
+                </div>
+
                 <main className='app'>
                     <Nav />
                     {children}
                 </main>
-            </div>
+            </Provider>
         </body>
     </html>
-  )
-}
+  );
 
 export default RootLayout
