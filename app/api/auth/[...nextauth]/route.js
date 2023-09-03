@@ -31,7 +31,7 @@ const handler = NextAuth({
                     await User.create({
                         email: profile.email,
                         username: profile.email.split("@")[0].toLowerCase(),
-                        image: profile.image,
+                        image: profile.picture,
                     });
                 }
 
